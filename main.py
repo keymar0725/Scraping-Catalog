@@ -13,7 +13,7 @@ import sys
 search_word = sys.argv[1]       # machine name
 
 
-# Setting of DL
+### Setting of DL
 dldir_name = 'Downloads/'+search_word
 dldir_path = Path(dldir_name)
 dldir_path.mkdir(exist_ok=True)  # 存在していてもOKとする（エラーで止めない）
@@ -25,7 +25,7 @@ options.add_experimental_option("prefs", {
 })
 
 
-# Scraping
+### Scraping
 browser =   webdriver.Chrome(ChromeDriverManager().install(), options=options)
 url = 'https://www.mitsubishielectric.co.jp/ldg/wink/ssl/top.do'                # Link of 三菱WINK
 browser.get(url)
